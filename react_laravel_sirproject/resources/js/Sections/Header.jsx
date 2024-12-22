@@ -1,5 +1,7 @@
+
 import { Link } from '@inertiajs/react'
-import React from 'react'
+import React from 'react';
+
 
 export default function Header() {
     return (
@@ -88,6 +90,7 @@ export default function Header() {
                 </div>
             </section>
             {/* header main area end */}
+           
             <header className="rr-header-height z-index-3">
                 {/* header area start */}
                 <div id="header-sticky" className="rr-header-area">
@@ -101,10 +104,12 @@ export default function Header() {
                                     <nav className="rr-main-menu-content">
                                         <ul>
                                             <li className="has-dropdown">
-                                                <Link to="/">Home</Link>
+                                                <Link href={route('home')}>Home</Link>
                                                 
                                             </li>
-                                            <li><a href="about.html">about us</a></li>
+                                            <li>
+                                            <Link href={route('about')}>About</Link>
+                                                </li>
                                             <li className="has-dropdown">
                                                 <a href="service-details.html">Service</a>
                                                 <ul className="submenu rr-submenu">
@@ -133,7 +138,9 @@ export default function Header() {
                                                     <li><a href="blog-details.html">Blog Details</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li>
+                                            <Link href={route('contact')}>Contact</Link>
+                                                </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -156,6 +163,9 @@ export default function Header() {
                 </div>
                 {/* header area end */}
             </header>
+
+         
+           
 
         </>
     )

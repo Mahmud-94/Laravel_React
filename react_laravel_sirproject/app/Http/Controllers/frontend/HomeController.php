@@ -19,9 +19,11 @@ class HomeController extends Controller
     {
         $properties = Property::orderBy('id')->limit(5)->get();
 
-        $agents = Agent::orderBy('name')->get();
+        // $agents = Agent::orderBy('name')->get();
+        $agents = Agent::all();
 
-        $experts = Expert::orderBy('name')->limit(5)->get();
+        // $experts = Expert::orderBy('name')->limit(5)->get();
+        $experts = Expert::all();
         // //  dd($agents);
         // return view('frontend.home', compact('properties', 'agents', 'experts'));
 
